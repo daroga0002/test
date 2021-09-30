@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ⚠️ Note
+        ⚠️ **Note**
         Before you submit an bug, please perform the following first:
 
         1. Remove the local `.terraform` directory (! ONLY if state is stored remotely, which hopefully you are following that best practice!): `rm -rf .terraform/`
