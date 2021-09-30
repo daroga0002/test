@@ -21,6 +21,6 @@ body:
     attributes:
       label: What happened?
       description: Please provide a clear and concise question.
-      placeholder: Tell us what you see!
+      placeholder: Ask us a question
     validations:
       required: true
