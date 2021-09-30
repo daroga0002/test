@@ -8,55 +8,37 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+        ⚠️ Note
+        Before you submit an issue, please perform the following first:
+
+        1. Remove the local `.terraform` directory (! ONLY if state is stored remotely, which hopefully you are following that best practice!): `rm -rf .terraform/`
+        2. Re-initialize the project root to pull down modules: `terraform init`
+        3. Re-attempt your terraform plan or apply and check if the issue still persists
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
+      description: Please provide a clear and concise description of the issue you are encountering, your current setup, and what steps led up to the issue. If you can provide a reproduction, that will help tremendously.
       placeholder: Tell us what you see!
-      value: "A bug happened!"
     validations:
       required: true
-  - type: dropdown
+  - type: textarea
     id: version
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      label: Terraform Version
+      description: Paste `terraform version` output
+      render: shell
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
-    id: logs
+    id: plan
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      label: terraform plan
+      description: Please copy and paste any relevant `terraform plan`
       render: shell
-  - type: checkboxes
-    id: terms
+  - type: textarea
+    id: apply
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: terraform apply
+      description: Please copy and paste any relevant `terraform apply`
+      render: shell
