@@ -40,18 +40,12 @@ body:
   - type: textarea
     id: config
     attributes:
-      label: Module config
-      description: Please copy and paster any relevant module invocation code
+      label: Configuration to replicate bug
+      description: Please copy and paster any relevant module configuration to replicate issue
       render: shell
   - type: textarea
     id: plan
     attributes:
-      label: terraform plan
-      description: Please copy and paste any relevant `terraform plan`
-      render: shell
-  - type: textarea
-    id: apply
-    attributes:
-      label: terraform apply
-      description: Please copy and paste any relevant `terraform apply`
+      label: terraform plan and apply
+      description: Please copy and paste any relevant `terraform plan` and `terraform apply` snippet
       render: shell
