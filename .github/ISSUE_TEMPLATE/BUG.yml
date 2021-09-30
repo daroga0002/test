@@ -35,6 +35,20 @@ body:
     attributes:
       label: Terraform Version
       description: Paste `terraform version` output
+      placeholder: |
+        $ terraform version
+        Terraform v1.0.6
+        on darwin_amd64
+        + provider registry.terraform.io/hashicorp/aws v3.60.0
+        + provider registry.terraform.io/hashicorp/cloudinit v2.2.0
+        + provider registry.terraform.io/hashicorp/kubernetes v2.4.1
+        + provider registry.terraform.io/hashicorp/local v2.1.0
+        + provider registry.terraform.io/hashicorp/null v3.1.0
+        + provider registry.terraform.io/hashicorp/template v2.2.0
+        + provider registry.terraform.io/terraform-aws-modules/http v2.4.1
+
+        Your version of Terraform is out of date! The latest version
+        is 1.0.7. You can update by downloading from https://www.terraform.io/downloads.html
       render: shell
     validations:
       required: true
