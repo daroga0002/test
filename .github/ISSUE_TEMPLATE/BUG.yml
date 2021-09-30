@@ -1,7 +1,7 @@
 name: Bug Report
 description: File a bug report
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug", "needs triage"]
 assignees:
   - octocat
 body:
@@ -9,7 +9,7 @@ body:
     attributes:
       value: |
         ⚠️ Note
-        Before you submit an issue, please perform the following first:
+        Before you submit an bug, please perform the following first:
 
         1. Remove the local `.terraform` directory (! ONLY if state is stored remotely, which hopefully you are following that best practice!): `rm -rf .terraform/`
         2. Re-initialize the project root to pull down modules: `terraform init`
@@ -30,6 +30,12 @@ body:
       render: shell
     validations:
       required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Module config
+      description: Please copy and paster any relevant module invocation code
+      render: shell
   - type: textarea
     id: plan
     attributes:
