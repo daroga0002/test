@@ -5,13 +5,6 @@ labels: ["bug", "needs triage"]
 assignees:
   - octocat
 body:
-  - type: checkboxes
-    attributes:
-      label: Is there an existing issue for this?
-      description: Please search to see if an issue already exists for the bug you encountered.
-      options:
-      - label: I have searched the existing issues
-        required: true
   - type: markdown
     attributes:
       value: |
@@ -21,6 +14,14 @@ body:
         1. Remove the local `.terraform` directory (! ONLY if state is stored remotely, which hopefully you are following that best practice!): `rm -rf .terraform/`
         2. Re-initialize the project root to pull down modules: `terraform init`
         3. Re-attempt your terraform plan or apply and check if the issue still persists
+        
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+      - label: I have searched the existing issues
+        required: true
   - type: textarea
     id: what-happened
     attributes:
