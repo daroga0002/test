@@ -1,0 +1,26 @@
+name: ❓ Question
+description: Ask a question
+title: "[Question]: "
+labels: ["question", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Note**
+        Before you submit question please check `README.md` file which usually answering for a lot common questions
+        
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the question you have.
+      options:
+      - label: I have searched the existing issues
+        required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Please provide a clear and concise description of your question.
+      placeholder: Tell us what you see!
+    validations:
+      required: true
